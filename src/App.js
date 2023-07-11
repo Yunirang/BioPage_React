@@ -1,7 +1,6 @@
 import './App.css';
 import React from 'react';
 import data from './advisorsMockData.json';
-// import Game from './game.js';
 import Bootstrap from './bootstrap.js';
 
 
@@ -22,7 +21,6 @@ function App(){
         )
       )}
     </div>
-        {/* <Game/> Uncomment to see game */} 
         <Bootstrap advisors={data}/>
     </>
     
