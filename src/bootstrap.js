@@ -12,6 +12,7 @@ function Bootstrap({ advisors }) {
               <Card.Img
                 variant="top"
                 src={advisor.photo}
+                style={{ objectFit: 'cover', width: '100%', height: '100%', maxHeight: '600px', maxWidth: '600px' }}
               />
               <Card.Body>
                 <Card.Title>{advisor.advisorName}</Card.Title>
@@ -23,23 +24,6 @@ function Bootstrap({ advisors }) {
               </Card.Body>
             </Card>
           ))}
-      </div>
-
-    <div class="headshot-box c-all c-leadership c-advisors c-client c-investment show">
-      <a href="jordann-andrusiak.html" target="_self">
-        <img src="https://images.ctfassets.net/nac4rsvtoh64/AoDDDMoNN8UoCHINPRjaZ/c641ac3dafd51baa3922cabc8afb3288/Jordann_Andrusiak.png" alt="Jordann M. Andrusiak, CFP®"/>
-     </a>
-      <div class="headshot-text">
-          <div>
-              <a href="jordann-andrusiak.html" target="_self">
-                <h4>Jordann M. Andrusiak, CFP®</h4>
-              </a>
-              </div>
-              <div>
-             <p>Advisor</p><p>Chief Client Experience Officer</p><p>Investment Committee Member</p>
-            </div>
-       
-          </div>
       </div>
     </div>
   );
