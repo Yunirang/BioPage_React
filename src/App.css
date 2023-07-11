@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Preloaded CSS Above */
+
+.avatar {
+  border: radius 50px;
+}
+
+.data {
+  border: 2px solid red;
+  width: 60%;
+  margin: auto;
+}
+
+.advisor{
+  border: 2px solid red;
+  width: 60%;
+ 
 }
