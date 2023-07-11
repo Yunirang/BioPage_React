@@ -23,8 +23,6 @@ function App(){
     </div>
         <Bootstrap advisors={data}/>
     </>
-    
-
   )
 }
 

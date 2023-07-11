@@ -20,7 +20,22 @@ function Bootstrap({advisors}) {
     </Card>
         )
     )}
-   
+   <div class="headshot-box c-all c-advisors show">
+    <a href="sarah-zvekan.html" target="_self">
+        <img src="https://images.ctfassets.net/nac4rsvtoh64/7tkPdWyeB60RJYnomrsHyz/88ef2b2f55790705945f580352d28295/2020_PIC_resized.png" alt="Sarah J. Zvekan"/>
+    </a>
+    <div class="headshot-text">
+        <div>
+            <a href="sarah-zvekan.html" target="_self">
+                <h4>Sarah J. Zvekan</h4>
+            </a>
+        </div>
+        <div>
+            <p>Advisor</p>
+        </div>
+       
+    </div>
+  </div>
     </>
     
   );
