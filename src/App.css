@@ -2,16 +2,35 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+
+}
+
+.positionText {
+  color: #007bff;
+  font-family: noto sans;
+  font-weight: bold;
+}
+
+.advisorText {
+  font-family: noto sans;
 }
 
 .card-container {
   display: flex;
+  margin: auto;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: left;
+  width: 66%;
+
 }
 
 .card {
   margin-bottom: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin: 10px;
+  /* border: transparent; */
 }
 
 .headshot-box {

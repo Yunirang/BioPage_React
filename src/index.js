@@ -1,18 +1,49 @@
-// bridge between components and the DOM
-
-
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Layout from "./layout";
+import Home from "./home";
+import Blogs from "./blogs";
+import Contact from "./contact";
+import Bootstrap from './bootstrap.js';
+import Details from  './advisorDetail.js';
+import data from './advisorsMockData.json';
+import {Link} from "react-router-dom";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+    <BrowserRouter>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">App</Link>
+          </li>
+          <li>
+            <Link to="/home">Home</Link>
+          </li>
+          <li>
+            <Link to="/blogs">Blogs</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
+        </ul>
+      </nav>
+      <Routes>
+
+        <Route exact path="/" element={<Bootstrap advisors={data}/>} />
+        <Route path="/detail" element={<Details advisors={data}/>} />
+        <Route path="/blogs" element={<Blogs advisors={data}/>} />
+        <Route path="/contact" element={<Contact advisors={data}/>} />
+        <Route path="/home" element={<Home advisors={data}/>} />
+      </Routes>
+
+    </BrowserRouter>
+  );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
