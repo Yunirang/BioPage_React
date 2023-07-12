@@ -8,6 +8,7 @@ function Bootstrap({ advisors }) {
     console.log(id);
   }
   return (
+
     <div className="bios">
       <div className="card-container">
         {advisors &&
@@ -21,11 +22,10 @@ function Bootstrap({ advisors }) {
                 style={{ objectFit: 'cover', width: '100%', height: '100%', maxHeight: '600px', maxWidth: '600px' }}
               />
               <Card.Body>
-                <a href={advisor.email} target="_blank" rel="noreferrer">
                 <Card.Title className="positionText" >{advisor.advisorName}</Card.Title>
-                </a>
                 <Card.Text className="advisorText">
                   {advisor.position}
+                  <br />
                   {advisor.certs}
                   </Card.Text>
               </Card.Body>

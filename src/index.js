@@ -32,8 +32,10 @@ root.render(
           </li>
         </ul>
       </nav>
+      <h1 class="ourTeam">
+        Our Team
+      </h1>
       <Routes>
-
         <Route exact path="/" element={<Bootstrap advisors={data}/>} />
         <Route path="/detail" element={<Details advisors={data}/>} />
         <Route path="/blogs" element={<Blogs advisors={data}/>} />

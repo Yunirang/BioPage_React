@@ -2,12 +2,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
 
-
+.ourTeam{
+  color: #065b95;
+  font-family: times new roman;
+  margin: 5%;
+  margin-left: 15%;
 }
 
 .positionText {
-  color: #007bff;
+  color: #065b95;
   font-family: noto sans;
   font-weight: bold;
 }
