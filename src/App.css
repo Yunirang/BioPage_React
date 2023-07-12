@@ -4,6 +4,60 @@
   justify-content: space-between;
 }
 
+.bio-detail-name{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.bio-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.left-section {
+  flex: 0 0 300px;
+  margin-right: 40px;
+}
+
+.bio-pic img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bio-details {
+  margin-top: 10px;
+  
+}
+
+.bio-description p.nameBold {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.bio-details p {
+  margin-bottom: 5px;
+}
+
+.right-section {
+  flex: 1;
+}
+
+.bio-description {
+  margin-top: 20px;
+}
+
+.bio-description p {
+  line-height: 1.6;
+  font-size: 18px;
+  color: #333;
+  font-family: "Arial", sans-serif;
+}
+
+
 .ourTeam{
   color: #065b95;
   font-family: times new roman;
