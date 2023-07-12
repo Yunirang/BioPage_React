@@ -8,7 +8,7 @@ import Home from "./home";
 import Blogs from "./blogs";
 import Contact from "./contact";
 import Bootstrap from './bootstrap.js';
-import Details from  './advisorDetail.js';
+import BioDetails from  './advisorDetail.js';
 import data from './advisorsMockData.json';
 import {Link} from "react-router-dom";
 
@@ -32,12 +32,10 @@ root.render(
           </li>
         </ul>
       </nav>
-      <h1 class="ourTeam">
-        Our Team
-      </h1>
+     
       <Routes>
         <Route exact path="/" element={<Bootstrap advisors={data}/>} />
-        <Route path="/detail" element={<Details advisors={data}/>} />
+        <Route path="/detail/:id" element={<BioDetails advisors={data} />} />
         <Route path="/blogs" element={<Blogs advisors={data}/>} />
         <Route path="/contact" element={<Contact advisors={data}/>} />
         <Route path="/home" element={<Home advisors={data}/>} />
