@@ -1,7 +1,5 @@
 import Card from 'react-bootstrap/Card';
 import Img from './Jordann_Andrusiak.png';
-import BioDetails from './advisorDetail.js';
-import {Link} from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 
@@ -36,7 +34,7 @@ function Bootstrap({ advisors }) {
                   <Card.Text className="advisorText">
                     {advisor.position}
                     <br />
-                    {advisor.certs}
+                    {advisor.certs && advisor.certs.length > 0 ? `\u00A0${advisor.certs.join("")}` : ' '}
                     </Card.Text>
                 </Card.Body>
               </Card>

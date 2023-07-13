@@ -8,6 +8,7 @@
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 5px;
+  font-family: noto Serif;
 }
 .bio-container {
   display: flex;
@@ -24,8 +25,9 @@
 
 .bio-pic img {
   width: 100%;
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* border-radius: 50%; */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
 }
 
 .bio-details {
@@ -36,10 +38,13 @@
 .bio-description p.nameBold {
   font-weight: bold;
   font-size: 24px;
+  font-family: noto Serif;
 }
 
 .bio-details p {
   margin-bottom: 5px;
+  line-height: 15px;
+  font-family: noto Serif;
 }
 
 .right-section {
@@ -51,10 +56,12 @@
 }
 
 .bio-description p {
-  line-height: 1.6;
   font-size: 18px;
+  font-weight: 400;
   color: #333;
-  font-family: "Arial", sans-serif;
+  font-family: Noto Serif;
+  font-style: normal;
+  line-height: 22px;
 }
 
 
@@ -67,6 +74,7 @@
 }
 
 .positionText {
+  padding-top: 0px;
   color: #065b95;
   font-family: noto sans;
   font-weight: bold;
@@ -90,7 +98,11 @@
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   margin: 10px;
-  /* border: transparent; */
+  
+}
+
+.card-body{
+  border-top-width: 0px;
 }
 
 .headshot-box {
