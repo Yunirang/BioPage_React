@@ -58,7 +58,7 @@ function Bootstrap({ advisors }) {
                 <Card.Text className="advisorText">
                   {advisor.position}
                   <br />
-                  {advisor.certs && advisor.certs.length > 0 ? (advisor.certs.map((cert, i) => (<span key={i}>{cert !== '' ? cert : <span>&nbsp;</span>}</span>))) : (<span>&nbsp;</span>)}
+                  {advisor.certs && advisor.certs.some(cert => cert !== '') ? (<span>{advisor.certs.filter(cert => cert !== '').join(' ')}</span>) : (<span>&nbsp;</span>)}
                 </Card.Text>
               </Card.Body>
             </Card>
