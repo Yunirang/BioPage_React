@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
+
 function Bootstrap({ advisors }) {
   
 
@@ -22,7 +23,10 @@ function Bootstrap({ advisors }) {
         <div className="card-container">
           {advisors &&
             advisors.map((advisor, i) => (
-              <Card key={i} onClick={() => handleClick(advisor.bioID)} style={{ width: '18rem' }}>
+              <Card key={i} 
+              onClick={() => handleClick(advisor.bioID)} 
+              style={{ width: '18rem' }}
+              className="hover-card">
                 <Card.Img
                   variant="top"
                   src={Img}

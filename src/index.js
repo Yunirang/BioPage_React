@@ -16,7 +16,7 @@ import {Link} from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
-      <nav>
+      {/* <nav>
         <ul>
           <li>
             <Link to="/">App</Link>
@@ -31,7 +31,7 @@ root.render(
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
-      </nav>
+      </nav> */}
      
       <Routes>
         <Route exact path="/" element={<Bootstrap advisors={data}/>} />
