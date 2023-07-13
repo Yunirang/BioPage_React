@@ -21,7 +21,7 @@
     "phone": "555-123-4567",
     "email": "johndoe@financialconsulting.com",
     "description": "John Doe is a highly knowledgeable financial consultant with expertise in investment strategies and wealth management. He provides personalized solutions to clients and helps them achieve their financial goals. With a strong track record of success, he is dedicated to delivering exceptional service and building long-term relationships.",
-    "certs": ["CFC"]
+    "certs": ["CFC", "CITC"]
   },
   {
     "bioID": "3",
@@ -32,7 +32,7 @@
     "phone": "555-987-6543",
     "email": "emily.thompson@marketingexperts.com",
     "description": "Emily Thompson is a seasoned marketing specialist who excels in creating innovative campaigns and driving brand success. With her deep understanding of consumer behavior and market trends, she develops strategies that generate significant results. Her passion for marketing is evident in her dedication to helping businesses thrive and stay ahead of the competition.",
-    "certs": ["CMS"]
+    "certs": ["CMS", "CFC"]
   },
   {
     "bioID": "4",
@@ -43,7 +43,7 @@
     "phone": "555-456-7890",
     "email": "robert.johnson@legaladvisors.com",
     "description": "Robert Johnson is a highly experienced legal counsel with expertise in corporate law. He provides comprehensive legal advice and representation to businesses, ensuring compliance and protecting their interests. With his meticulous approach and attention to detail, he offers valuable guidance to clients, helping them navigate complex legal matters successfully.",
-    "certs": ["CFC"]
+    "certs": ["CFC", "CMS"]
   },
   {
     "bioID": "1010",

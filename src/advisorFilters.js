@@ -1,31 +1,41 @@
 import React, { useState, useEffect } from 'react';
 
 function AdvisorFilter({ advisors, onFilter }) {
-  const [selectedCert, setSelectedCert] = useState('');
+  const [selectedCerts, setSelectedCerts] = useState([]);
   const [certifications, setCertifications] = useState([]);
 
-
-  const handleCertChange = (event) => {
-    setSelectedCert(event.target.value);
-    onFilter(event.target.value);
+  const handleCertChange = (cert) => {
+    if (selectedCerts.includes(cert)) {
+      setSelectedCerts(selectedCerts.filter((c) => c !== cert));
+    } else {
+      setSelectedCerts([...selectedCerts, cert]);
+    }
   };
 
   useEffect(() => {
     const uniqueCerts = [...new Set(advisors.flatMap((advisor) => advisor.certs.filter(cert => cert !== "")))];
     setCertifications(uniqueCerts);
-  }, [advisors]);
+    onFilter(selectedCerts); // Notify parent component of selected certifications
+  }, [advisors, selectedCerts, onFilter]);
 
   return (
     <div className="filterTitle">
-      <label htmlFor="certSelect">Filter by Certification   {'\u00A0'}</label>
-      <select id="certSelect" value={selectedCert} onChange={handleCertChange}>
-        <option value="">All</option>
+     
+      
+      <div className="certPills">
+      {/* <label htmlFor="certSelect">
+        <p className=" certFilterTitle"> Filter by Certification </p>
+     </label> */}
         {certifications.map((cert) => (
-          <option key={cert} value={cert}>
+          <div
+            key={cert}
+            className={`certPill ${selectedCerts.includes(cert) ? 'selected' : ''}`}
+            onClick={() => handleCertChange(cert)}
+          >
             {cert}
-          </option>
+          </div>
         ))}
-      </select>
+      </div>
     </div>
   );
 }
