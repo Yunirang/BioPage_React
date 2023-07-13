@@ -1,28 +1,41 @@
 import Card from 'react-bootstrap/Card';
 import Img from './Jordann_Andrusiak.png';
 import { useNavigate } from "react-router-dom";
-
+import React, { useState } from 'react';
+import AdvisorFilter from './advisorFilters';
 
 
 
 function Bootstrap({ advisors }) {
   
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+  const [filteredAdvisors, setFilteredAdvisors] = useState(advisors);
 
-    const handleClick = (id) => {
-      navigate(`/detail/${id}`);
-    }
+  const handleClick = (id) => {
+    navigate(`/detail/${id}`);
+  }
   
+  const handleFilter = (selectedCert) => {
+    if (selectedCert === '') {
+      setFilteredAdvisors(advisors); // Show all advisors when no certification is selected
+    } else {
+      const filtered = advisors.filter((advisor) =>
+        advisor.certs.includes(selectedCert)
+      );
+      setFilteredAdvisors(filtered); // Update the filtered list based on the selected certification
+    }
+  };
   return (
     <div>  
       <h1 className="ourTeam">
         Our Team
       </h1> 
+      <AdvisorFilter advisors={advisors} onFilter={handleFilter} />
       <div className="bios">
         <div className="card-container">
           {advisors &&
-            advisors.map((advisor, i) => (
+            filteredAdvisors.map((advisor, i) => (
               <Card key={i} 
               onClick={() => handleClick(advisor.bioID)} 
               style={{ width: '18rem' }}

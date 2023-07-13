@@ -43,7 +43,7 @@
     "phone": "555-456-7890",
     "email": "robert.johnson@legaladvisors.com",
     "description": "Robert Johnson is a highly experienced legal counsel with expertise in corporate law. He provides comprehensive legal advice and representation to businesses, ensuring compliance and protecting their interests. With his meticulous approach and attention to detail, he offers valuable guidance to clients, helping them navigate complex legal matters successfully.",
-    "certs": ["CLC"]
+    "certs": ["CFC"]
   },
   {
     "bioID": "1010",
@@ -54,7 +54,7 @@
     "phone": "555-234-5678",
     "email": "sarah.reynolds@hrconsulting.com",
     "description": "Sarah Reynolds is a trusted HR consultant specializing in talent management and organizational development. She helps companies build strong teams, develop effective HR strategies, and create a positive work culture. With her expertise in recruitment and employee engagement, she ensures businesses have the right people and practices in place to thrive.",
-    "certs": ["CHRC"]
+    "certs": ["CFC"]
   },
   {
     "bioID": "5",
