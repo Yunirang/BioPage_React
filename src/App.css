@@ -77,7 +77,7 @@
   font-family: times new roman;
   font-size: 50px;
   margin: 5%;
-  margin-left: 15%;
+  margin-left: 18%;
 }
 
 .positionText {
@@ -219,6 +219,7 @@
   justify-content: flex-end;
   margin-right: 20%;
   margin-bottom: 2.5%;
+  font-family: Arial, sans-serif;
 }
 
 .certPill {
@@ -232,6 +233,29 @@
   outline: 1px solid #5a5a5a;
   cursor: pointer;
   transition: background-color 0.2s;
+}
+
+.button-clear {
+  background-color: #065b95;
+  color: #fff;
+  border: none;
+  margin: 5px;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  outline: 1px solid #5a5a5a;
+  transition: background-color 0.2s;
+}
+
+.button-clear:hover {
+  background-color: #065b95;
+  color: #fff;
+}
+
+.certPill:hover {
+  background-color: #065b95;
+  color: #fff;
+
 }
 
 .certPill.selected {

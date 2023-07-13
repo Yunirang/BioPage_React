@@ -37,7 +37,7 @@ function AdvisorFilter({ advisors, onFilter }) {
             
           </div>
         ))}
-        <button onClick={handleClearFilters}>Clear Filters</button>
+        <button onClick={handleClearFilters} className="button-clear">Clear Filters</button>
       </div>
     </div>
   );
