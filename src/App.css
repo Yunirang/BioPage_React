@@ -265,15 +265,6 @@
 
 /* More Details */
 
-.more-details-container {
-  position: relative;
-  display: inline-block;
-}
-
-.more-details-button {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
 
 .more-details-container:hover .more-details-button,
 .details-content:hover + .more-details-button {
@@ -296,3 +287,66 @@
 .more-details-container:hover .details-content {
   display: block;
 }
+
+.more-details-loc{
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #065b95;
+  margin-left: 65%;
+  display: center;
+}
+
+.more-details-container {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  text-align: auto;
+}
+
+.more-details-loc {
+  /* background-color: #f8f8f8; */
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 65%;
+  transition: background-color 0.3s ease;
+}
+
+.more-details-container:hover .more-details-loc {
+  background-color: #ebebeb;
+}
+
+.details-content {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.details-row {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  margin-bottom: 10px;
+}
+
+.details-item {
+  width: 50%; /* Divide the row into equal halves */
+}
+
+.details-item h3 {
+  font-size: 12px; /* Adjust the font size to make it smaller */
+  margin-bottom: 5px;
+  font-weight: bold; /* Add bold styling to the headings */
+}
+
+.details-item p {
+  font-size: 12px; /* Adjust the font size to make it smaller */
+  margin: 0;
+}
+
