@@ -60,7 +60,7 @@ function Bootstrap({ advisors }) {
                 <Card.Text className="advisorText">
                   {advisor.position}
                   <br />
-                  {advisor.certs && advisor.certs.some(cert => cert !== '') ? (<span>{advisor.certs.filter(cert => cert !== '').join(' ')}</span>) : (<span>&nbsp;</span>)}
+                  {advisor.certs && advisor.certs.some(cert => cert !== '') ? (<span>{advisor.certs.filter(cert => cert !== '').join(', ')}</span>) : (<span>&nbsp;</span>)}
                 </Card.Text>
               </Card.Body>
 

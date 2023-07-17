@@ -13,6 +13,13 @@ function BioDetails({ advisors }) {
   const address = selectedAdvisor.address;
   const desc = selectedAdvisor.description;
   const certs = selectedAdvisor.certs;     
+  const geo = selectedAdvisor.geography;
+  const service = selectedAdvisor.serviceLocation;
+  const client = selectedAdvisor.clientSize;
+  const clientType = selectedAdvisor.clientType;
+  const technical = selectedAdvisor.technica;
+
+
 
 
   return (
@@ -35,16 +42,12 @@ function BioDetails({ advisors }) {
           <p>{address}</p>
           <p>{phone}</p>
           <p>{email}</p>
-
-          <p>
-            Bio Info
-          </p>
-          <p>
-            Bio Info
-          </p>
-          <p>
-            Bio Info
-          </p>
+          <br />
+          <p> <b>Location:</b> {Array.isArray(geo) && certs.length > 0 && geo[0] !== "" && ` ${geo.join(", ")}`} </p>
+          <p> <b>Services:</b> {Array.isArray(service) && certs.length > 0 && service[0] !== "" && ` ${service.join(", ")}`} </p>
+          <p> <b>Wealth Continua:</b> {Array.isArray(client) && certs.length > 0 && client[0] !== "" && ` ${client.join(", ")}`} </p>
+          <p> <b>Client Niche:</b> {Array.isArray(clientType) && certs.length > 0 && clientType[0] !== "" && ` ${clientType.join(", ")}`} </p>
+          <p> <b>Field of Expertise:</b> {Array.isArray(technical) && certs.length > 0 && technical[0] !== "" && ` ${technical.join(", ")}`} </p>
 
         </div>
       </div>
@@ -55,12 +58,7 @@ function BioDetails({ advisors }) {
             {Array.isArray(certs) && certs.length > 0 && certs[0] !== "" && `, ${certs.join(", ")}`}
         </p>
         <p>{desc}</p>
-        <p> More Desc </p>
-        <p> More Desc </p>
-        <p> More Desc </p>
-        <p> More Desc </p>
-        <p> More Desc </p>
-        <p> More Desc </p>
+        
 
 
       </div>
