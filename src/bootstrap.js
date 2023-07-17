@@ -1,3 +1,5 @@
+// Main home page for advisor list 
+
 import Card from 'react-bootstrap/Card';
 import Img from './Jordann_Andrusiak.png';
 import { useNavigate } from "react-router-dom";
@@ -11,8 +13,12 @@ function Bootstrap({ advisors }) {
   const [filteredAdvisors, setFilteredAdvisors] = useState(advisors);
   const [selectedCerts, setSelectedCerts] = useState([]);
 
-  const handleClick = (id) => {
-    navigate(`/detail/${id}`);
+  // when advisor clicked
+  const handleClick = (advName) => {
+    
+    // replace space with - for a better looking url (replaces the %20)
+    advName = advName.replace(" ", "-")
+    navigate(`/detail/${advName}`);
   };
 
   const handleFilter = (selectedCerts) => {
@@ -39,7 +45,7 @@ function Bootstrap({ advisors }) {
           {filteredAdvisors.map((advisor, i) => (
             <Card
               key={i}
-              onClick={() => handleClick(advisor.bioID)}
+              onClick={() => handleClick(advisor.advisorName)}
               style={{ width: '18rem' }}
               className="hover-card"
             >

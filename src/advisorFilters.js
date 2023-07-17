@@ -1,3 +1,5 @@
+// Compoenent to filter the advisors based on selected pills 
+
 import React, { useState, useEffect } from 'react';
 
 function AdvisorFilter({ advisors, onFilter }) {
@@ -5,6 +7,7 @@ function AdvisorFilter({ advisors, onFilter }) {
   const [certifications, setCertifications] = useState([]);
   const [isFilterCleared, setIsFilterCleared] = useState(false);
 
+  // when filter selected
   const handleCertChange = (cert) => {
     if (selectedCerts.includes(cert)) {
       setSelectedCerts(selectedCerts.filter((c) => c !== cert));
@@ -13,6 +16,7 @@ function AdvisorFilter({ advisors, onFilter }) {
     }
   };
 
+  // when clear filter
   const handleClearFilters = () => {
     setSelectedCerts([]);
     setIsFilterCleared(true);
