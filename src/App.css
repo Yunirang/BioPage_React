@@ -263,4 +263,36 @@
   color: #fff;
 }
 
+/* More Details */
 
+.more-details-container {
+  position: relative;
+  display: inline-block;
+}
+
+.more-details-button {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.more-details-container:hover .more-details-button,
+.details-content:hover + .more-details-button {
+  opacity: 1;
+}
+
+.details-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  display: none;
+  width: 100%;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.more-details-container:hover .details-content {
+  display: block;
+}

@@ -3,6 +3,8 @@ import Img from './Jordann_Andrusiak.png';
 import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import AdvisorFilter from './advisorFilters';
+import MoreDetails from './moreDetails';
+
 
 function Bootstrap({ advisors }) {
   const navigate = useNavigate();
@@ -61,6 +63,8 @@ function Bootstrap({ advisors }) {
                   {advisor.certs && advisor.certs.some(cert => cert !== '') ? (<span>{advisor.certs.filter(cert => cert !== '').join(' ')}</span>) : (<span>&nbsp;</span>)}
                 </Card.Text>
               </Card.Body>
+
+              <MoreDetails advisors={advisor} />
             </Card>
           ))}
         </div>

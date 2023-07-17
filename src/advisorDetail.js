@@ -19,7 +19,8 @@ function BioDetails({ advisors }) {
     <div className="bio-container">
       <div className="left-section">
         <div className="bio-pic">
-          <img src={photo} 
+          <img 
+            src={photo} 
             alt={name} 
             style={{ objectFit: 'cover', width: '100%', height: '100%', maxHeight: '600px', maxWidth: '600px' }}
           />
@@ -35,6 +36,16 @@ function BioDetails({ advisors }) {
           <p>{phone}</p>
           <p>{email}</p>
 
+          <p>
+            Bio Info
+          </p>
+          <p>
+            Bio Info
+          </p>
+          <p>
+            Bio Info
+          </p>
+
         </div>
       </div>
       <div className="right-section">
@@ -44,6 +55,14 @@ function BioDetails({ advisors }) {
             {Array.isArray(certs) && certs.length > 0 && certs[0] !== "" && `, ${certs.join(", ")}`}
         </p>
         <p>{desc}</p>
+        <p> More Desc </p>
+        <p> More Desc </p>
+        <p> More Desc </p>
+        <p> More Desc </p>
+        <p> More Desc </p>
+        <p> More Desc </p>
+
+
       </div>
 
       </div>
